@@ -15,7 +15,8 @@
         width: 70%;
     }
     @include desktop{
-        width: 53vw;
+        margin-right: 4rem;
+        //width: 56vw;
     }
 }
 &__span-and-avatar{

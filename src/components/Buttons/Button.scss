@@ -21,16 +21,7 @@
         font-size: $tab-desk-subheader;
         width: 150px;
         padding: auto 32px;
-        // upload button only
-        position: absolute;
-        left: 70%;
-
     }
-
-    @include desktop{
-        margin: auto 2rem auto 2rem;
-    }
-
     &__div-icon{
         width: 45%;
         text-align: left;
@@ -43,6 +34,21 @@
         @include tablet{
             font-size: $tab-desk-subheader;
         }
+    }
+
+}
+
+// For Upload buttons only
+.upload__button{
+    @include tablet{
+        position: absolute;
+        left: 70%;
+
+    }
+
+    @include desktop{
+        margin: auto 2rem auto 2rem;
+        left: 69%;
     }
 
 }
