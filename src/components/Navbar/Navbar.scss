@@ -1,0 +1,60 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+.nav {
+  margin: 1rem;
+  @include tablet{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+
+  &__form{
+    position: relative;
+    @include tablet{
+        width: 70%;
+    }
+    @include desktop{
+        width: 53vw;
+    }
+}
+&__span-and-avatar{
+    color: $black-primary;
+    display: flex;
+    justify-content: space-between ;
+    margin-top: 1.3rem;
+    @include tablet{
+        margin-top: 0;
+    }
+}
+&__search{
+    line-height: $mobile-form-field-height;
+    width: 90%;
+
+    @include tablet{
+        height: $tablet-form-field-height;
+        width: 300px;
+    }
+}
+&__search-icon{
+    position: absolute;
+    left: 2%;
+    top: 30%;
+    transform: translateY(-25%);
+
+    @include tablet{
+        left: 1.7%;
+    }
+
+}
+&__input{
+    width: 100%;
+    padding-left: 30px;
+    color: $black-primary;
+    height: $mobile-form-field-height;
+    @include tablet{
+        height: $tablet-form-field-height;
+    }
+}
+
+}

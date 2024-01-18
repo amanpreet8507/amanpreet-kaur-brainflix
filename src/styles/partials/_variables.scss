@@ -1,0 +1,61 @@
+// responsive screen breakpoints
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1024px;
+
+
+// MOBILE TYPE KIT
+// page header
+$mobile-page-header: 24px;
+$mobile-ph-line-height: 32px;
+// section-header
+$mobilee-section-header: 12px;
+$mobile-sh-line-height: 20px;
+// subheader
+$mobile-subheader: 13px;
+//body copy
+$mobile-labels-buttons: 10px;
+$mobile-lb-line-height: 20px;
+
+
+// TABLET AMD DESKTOP TYPE KIT
+// page header
+$tab-desk-page-header: 24px;
+$tab-desk-ph-line-height: 32px;
+// section-header
+$tab-desk-section-header: 12px;
+$tab-desk-sh-line-height: 20px;
+// subheader
+$tab-desk-subheader: 13px;
+//body copy
+$tab-desk-labels-buttons: 10px;
+$tab-desk-lb-line-height: 20px;
+
+// COLORS
+// primary colors
+$black-primary: #323232;
+$blue-primary: #0095FF;
+$silver-primary: #AFAFAF;
+$white-primary: #FFFFFF;
+
+// secondary colors
+$black-secondary: #000000;
+$dark-blue-secondary: #0065AD;
+$mercury-secondary: #E1E1E1;
+$alabaster-secondary: #FAFAFA;
+
+// MARGINS
+// mobile
+$mobile-margin: 16px;
+// tablet
+$tablet-margin: 36px;
+// desktop
+$desktop-margin: auto;
+
+// FORM FIELDS
+// mobile
+$mobile-form-field-height: 40px;
+// tablet
+$tablet-form-field-height: 36px;
+
+// FORM-FIELD-WIDTH
+$form-field-width: 240px;
