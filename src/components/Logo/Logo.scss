@@ -5,6 +5,7 @@
     text-align: center;
     align-items: center;
     @include tablet{
+        width: 15%;
         margin-right: 6rem;
     }
     @include desktop{

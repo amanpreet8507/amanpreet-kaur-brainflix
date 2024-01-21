@@ -1,5 +1,7 @@
 @use "./styles/partials/typography" as *;
+@use './styles/partials/mixins' as *;
+@use './styles/partials/variables' as *;
 
 body {
     font-family: "Avenir Next LT Pro", sans-serif;
-  }
+}
