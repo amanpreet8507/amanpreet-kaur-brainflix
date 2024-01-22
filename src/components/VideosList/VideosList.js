@@ -24,7 +24,7 @@ const VideosList = ({ videoDataArr, featuredVideo, changeVideo }) => {
               }
             >
               {/* Video Image in Video List */}
-              <img className="videos__image" src={video.image}></img>
+              <img className="videos__image" src={video.image} alt={video.title}></img>
               <div className="videos__title-and-channel">
                 {/* Video Title in Video List */}
                 <p className="videos__title">{video.title}</p>

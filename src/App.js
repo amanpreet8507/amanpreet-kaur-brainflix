@@ -5,6 +5,7 @@ import videoData from "./data/video-details.json";
 import FeaturedVideo from "./components/FeaturedVideo/FeaturedVideo";
 import VideosList from "./components/VideosList/VideosList";
 import VideoDescription from "./components/VideoDescription/VideoDescription";
+import {BrowserRouter, Router, Route} from "react-router-dom";
 
 function App() {
   const [currentVideo, setCurrentVideo] = useState(videoData);

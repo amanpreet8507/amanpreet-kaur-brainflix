@@ -25,9 +25,9 @@ const FeaturedVideo = ({ featuredVideo }) => {
             <div className="video__icon-div">
               <img
                 className="video__icon video__full-screen-icon"
-                src={FullScreenIcon}
+                src={FullScreenIcon} alt="icon"
               ></img>
-              <img className="video__volume-icon" src={VolumeUpIcon}></img>
+              <img className="video__volume-icon" alt="icon" src={VolumeUpIcon}></img>
             </div>
           </div>
         </div>
