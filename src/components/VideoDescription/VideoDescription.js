@@ -6,7 +6,18 @@ import likesIcon from '../../assets/Icons/likes.svg';
 
 const VideoDescription = ({ featuredVideo }) => {
     const { title, channel, description, likes, views, commentData} = featuredVideo
-    console.log(commentData)
+    {/*ConverTimestamp to Date */}
+    const convertTimeStampToDate = (timestamp) => {
+        const date = new Date(timestamp)
+      
+        const day = date.getDate()+1
+        const month = date.getMonth()+1
+        const year = date.getFullYear()
+      
+        const finalDate  = `${day}/${month}/${year}`
+      
+        return finalDate
+      }
   return (
     <section className="video">
     {/******************** Featured Video Information Container *******************/}
@@ -55,7 +66,7 @@ const VideoDescription = ({ featuredVideo }) => {
                 <div className="comments__container-comment-details">
                     <div className="comments__container-name-date">
                         <p className="comments__container-name">{comment.name}</p>
-                        <p className="comments__container-date">{comment.timestamp}</p>
+                        <p className="comments__container-date">{convertTimeStampToDate(comment.timestamp)}</p>
                     </div>
                     <div className="comments__container__comment">
                         <p>{comment.comment}</p>
