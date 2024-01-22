@@ -26,7 +26,6 @@
         width: 45%;
         text-align: left;
     }
-
     &__icon{
         align-items: center;
         text-align: center;
@@ -35,7 +34,6 @@
             font-size: $tab-desk-subheader;
         }
     }
-
 }
 
 // For Upload button only
@@ -43,14 +41,11 @@
     @include tablet{
         position: absolute;
         left: 70%;
-
     }
-
     @include desktop{
         margin: auto 2rem auto 2rem;
         left: 69%;
     }
-
 }
 
 // For Comment button only
@@ -58,5 +53,8 @@
     @include tablet{
         margin: 3.3rem 1rem;
         padding-right: 1.2rem;
+        @include tablet{
+            margin: 3.3rem 1rem 0 1rem;
+        }
     }
 }

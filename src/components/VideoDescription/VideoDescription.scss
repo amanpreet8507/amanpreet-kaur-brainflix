@@ -5,20 +5,19 @@
     @include desktop{
         padding-left: 5rem;
         width: 60%;
-        border-right: 1px solid $silver-primary;
+        border-right: 2px solid $mercury-secondary;
     }
-    // Featured Video Information Container ***************
+    // Featured Video Information Container ******************
     &__info-container{
         padding: 1rem;
         @include desktop{
             padding: 1rem 0;
         }
-        
     }
     &__numbers{
         padding: 1rem;
-        border-top: 1px solid $silver-primary;
-        border-bottom: 1px solid $silver-primary;
+        border-top: 2px solid $mercury-secondary;
+        border-bottom: 2px solid $mercury-secondary;
         display: flex;
         @include desktop{
             border-top: none;
@@ -55,24 +54,24 @@
 // Comment Form **********************************
     &__comments-div{
         padding: 1rem;
+        @include desktop{
+            padding: 1rem 0 1rem 1rem;
+        }
     }
     &__no-of-comments{
         font-weight: bold;
     }
     &__form-section{
-        display: flex;
-        
+        display: flex;      
     }
     &__comment-form{
+        width: 100%;
         @include tablet{
             display: flex;
         }
-        @include desktop{
-            //width: 60%;
-        }
     }
     &__avatar-img{
-        background-color: white;
+        background-color: $silver-primary;
         width: 2.25rem;
         height: 2.25rem;
         object-fit: cover;
@@ -90,15 +89,15 @@
     }
     &__textarea{
         height: 15vh;
-        width: 70vw;
+        width: 92%;
         border-radius: 5px;
-        border: 1px solid $silver-primary;
+        border: 2px solid $mercury-secondary;
         background-color: $alabaster-secondary;
         padding: .75rem;
         color: $black-primary;
 
         @include tablet{
-            width: 60vw;
+            width: 62vw;
             height: 15px;
         }
         @include desktop{
@@ -106,3 +105,55 @@
         }
     }  
 }
+
+// Comments Section ***********************************
+.comments__container{
+    margin-top: 1rem;
+    display: flex;
+    border-top: 2px solid $mercury-secondary;
+    @include desktop{
+      width: 100%;
+      
+    }
+    &-section{
+      display: flex;
+      gap: 1rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+  
+      @include tablet{
+        margin: auto 5rem auto 3rem;
+      }
+    }
+    &__avatar-img{
+        background-color: $silver-primary;
+        width: 2.25rem;
+        height: 2.25rem;
+        object-fit: cover;
+        border-radius: 50%;
+        margin: 1rem 1rem 0 0;
+    
+        @include tablet{
+          width: 3rem;
+          height: 3rem;
+      }
+    }
+    &-comment-details{
+      display: inline;
+      padding: auto 2rem;
+      width: 95%;
+      //margin-top: 2rem;
+    }
+    &-name-date{
+      display: flex;
+      justify-content: space-between;
+      padding-right: 1rem;
+    }  
+    &-name{
+      font-weight: bold;
+    }
+    &__comment{
+        padding-right: 1rem;
+    }  
+  }
+  

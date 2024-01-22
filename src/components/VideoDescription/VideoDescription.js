@@ -47,6 +47,24 @@ const VideoDescription = ({ featuredVideo }) => {
           <CommentButton />
         </form>
       </section>
+      <section> 
+      {/************************** Comments Section ********************/}
+        {commentData && commentData.map((comment, index)=> (
+            <div key={index} className="comments__container">                
+                <img className="comments__container__avatar-img" src="#"></img>
+                <div className="comments__container-comment-details">
+                    <div className="comments__container-name-date">
+                        <p className="comments__container-name">{comment.name}</p>
+                        <p className="comments__container-date">{comment.timestamp}</p>
+                    </div>
+                    <div className="comments__container__comment">
+                        <p>{comment.comment}</p>
+                    </div>
+                </div>
+            </div>
+        ))}
+      
+      </section>
     </div>
     </section>
   )
