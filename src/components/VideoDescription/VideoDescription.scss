@@ -1,159 +1,156 @@
-@use '../../styles/partials/mixins' as *;
-@use '../../styles/partials/variables' as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
 
-.video{
-    @include desktop{
-        padding-left: 5rem;
-        width: 60%;
-        border-right: 2px solid $mercury-secondary;
+.video {
+  @include desktop {
+    padding-left: 5rem;
+    width: 60%;
+    border-right: 2px solid $mercury-secondary;
+  }
+  // Featured Video Information Container ******************
+  &__info-container {
+    padding: 1rem;
+    @include desktop {
+      padding: 1rem 0;
     }
-    // Featured Video Information Container ******************
-    &__info-container{
-        padding: 1rem;
-        @include desktop{
-            padding: 1rem 0;
-        }
+  }
+  &__numbers {
+    padding: 1rem;
+    border-top: 2px solid $mercury-secondary;
+    border-bottom: 2px solid $mercury-secondary;
+    display: flex;
+    @include desktop {
+      border-top: none;
     }
-    &__numbers{
-        padding: 1rem;
-        border-top: 2px solid $mercury-secondary;
-        border-bottom: 2px solid $mercury-secondary;
-        display: flex;
-        @include desktop{
-            border-top: none;
-        }
+  }
+  &__numbers-div {
+    width: 80%;
+    @include tablet {
+      display: flex;
+      gap: 2rem;
     }
-    &__numbers-div{
-        width: 80%;
-        @include tablet{
-            display: flex;
-            gap: 2rem;
-        }
+  }
+  &__views-likes {
+    text-align: end;
+    @include tablet {
+      justify-content: end;
     }
-    &__views-likes{
-        text-align: end;
-        @include tablet{
-            justify-content: end;
-        }
+  }
+  &__title {
+    @include desktop {
+      margin-bottom: 0;
     }
-    &__title{
-        @include desktop{
-            margin-bottom: 0;
-        }
-    }
-    &__channel{
-        font-weight: bold;
-    }
-    &__number{
-        color: $silver-primary;
-    }
-    &__description{
-        padding-right: 1rem;
-    }
+  }
+  &__channel {
+    font-weight: bold;
+  }
+  &__number {
+    color: $silver-primary;
+  }
+  &__description {
+    padding-right: 1rem;
+  }
 
-// Comment Form **********************************
-    &__comments-div{
-        padding: 1rem;
-        @include desktop{
-            padding: 1rem 0 1rem 1rem;
-        }
+  // Comment Form **********************************
+  &__comments-div {
+    padding: 1rem;
+    @include desktop {
+      padding: 1rem 0 1rem 1rem;
     }
-    &__no-of-comments{
-        font-weight: bold;
+  }
+  &__no-of-comments {
+    font-weight: bold;
+  }
+  &__form-section {
+    display: flex;
+  }
+  &__comment-form {
+    width: 100%;
+    @include tablet {
+      display: flex;
     }
-    &__form-section{
-        display: flex;      
-    }
-    &__comment-form{
-        width: 100%;
-        @include tablet{
-            display: flex;
-        }
-    }
-    &__avatar-img{
-        background-color: $silver-primary;
-        width: 2.25rem;
-        height: 2.25rem;
-        object-fit: cover;
-        border-radius: 50%;
-        margin: 3rem 1rem 0 0;
-    
-        @include tablet{
-          width: 3rem;
-          height: 3rem;
-      }
-    }
-    &__p{
-        color: $silver-primary;
-        font-weight: bold;
-    }
-    &__textarea{
-        height: 15vh;
-        width: 92%;
-        border-radius: 5px;
-        border: 2px solid $mercury-secondary;
-        background-color: $alabaster-secondary;
-        padding: .75rem;
-        color: $black-primary;
+  }
+  &__avatar-img {
+    background-color: $silver-primary;
+    width: 2.25rem;
+    height: 2.25rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 3rem 1rem 0 0;
 
-        @include tablet{
-            width: 62vw;
-            height: 15px;
-        }
-        @include desktop{
-            width: 30vw;
-        }
-    }  
+    @include tablet {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+  &__p {
+    color: $silver-primary;
+    font-weight: bold;
+  }
+  &__textarea {
+    height: 15vh;
+    width: 92%;
+    border-radius: 5px;
+    border: 2px solid $mercury-secondary;
+    background-color: $alabaster-secondary;
+    padding: 0.75rem;
+    color: $black-primary;
+
+    @include tablet {
+      width: 62vw;
+      height: 15px;
+    }
+    @include desktop {
+      width: 30vw;
+    }
+  }
 }
 
 // Comments Section ***********************************
-.comments__container{
-    margin-top: 1rem;
-    display: flex;
-    border-top: 2px solid $mercury-secondary;
-    @include desktop{
-      width: 100%;
-      
-    }
-    &-section{
-      display: flex;
-      gap: 1rem;
-      padding-top: 1rem;
-      padding-bottom: 1rem;
-  
-      @include tablet{
-        margin: auto 5rem auto 3rem;
-      }
-    }
-    &__avatar-img{
-        background-color: $silver-primary;
-        width: 2.25rem;
-        height: 2.25rem;
-        object-fit: cover;
-        border-radius: 50%;
-        margin: 1rem 1rem 0 0;
-    
-        @include tablet{
-          width: 3rem;
-          height: 3rem;
-      }
-    }
-    &-comment-details{
-      display: inline;
-      padding: auto 2rem;
-      width: 95%;
-      //margin-top: 2rem;
-    }
-    &-name-date{
-      display: flex;
-      justify-content: space-between;
-      padding-right: 1rem;
-    }  
-    &-name{
-      font-weight: bold;
-    }
-    &__comment{
-        padding-right: 1rem;
-    }  
+.comments__container {
+  margin-top: 1rem;
+  display: flex;
+  border-top: 2px solid $mercury-secondary;
+  @include desktop {
+    width: 100%;
   }
-  
+  &-section {
+    display: flex;
+    gap: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    @include tablet {
+      margin: auto 5rem auto 3rem;
+    }
+  }
+  &__avatar-img {
+    background-color: $silver-primary;
+    width: 2.25rem;
+    height: 2.25rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 1rem 1rem 0 0;
+
+    @include tablet {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+  &-comment-details {
+    display: inline;
+    padding: auto 2rem;
+    width: 95%;
+  }
+  &-name-date {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 1rem;
+  }
+  &-name {
+    font-weight: bold;
+  }
+  &__comment {
+    padding-right: 1rem;
+  }
+}

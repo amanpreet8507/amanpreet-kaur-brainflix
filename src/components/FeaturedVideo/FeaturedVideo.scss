@@ -1,82 +1,82 @@
-@use '../../styles/partials/mixins' as *;
-@use '../../styles/partials/variables' as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
 
 // Featured video on screen ********************
-.video{
-    &__container{
-        position: relative;
-        background-color: black;
-        text-align: center;
+.video {
+  &__container {
+    position: relative;
+    background-color: black;
+    text-align: center;
+  }
+  &__image-and-duration {
+    position: relative;
+  }
+  &__image {
+    position: relative;
+    height: 40vh;
+    width: 100%;
+    text-align: center;
+    @include tablet {
+      width: 80%;
+      height: 50vh;
     }
-    &__image-and-duration{
-        position: relative;
+    @include desktop {
+      width: 70%;
+      height: 65vh;
     }
-    &__image{
-        position: relative;
-        height: 40vh;
-        width: 100%;
-        text-align: center;
-        @include tablet{
-            width: 80%;
-            height: 50vh;
-        }
-        @include desktop{
-            width: 70%;
-            height: 65vh;
-        }
+  }
+  &__icons {
+    width: 80%;
+    left: 9%;
+    top: 85%;
+    right: 2%;
+    position: absolute;
+    display: flex;
+    @include tablet {
+      left: 15%;
     }
-    &__icons{
-        width: 80%;
-        left: 9%;
-        top: 85%;
-        right: 2%;
-        position: absolute;
-        display: flex;
-        @include tablet{
-            left: 15%;
-        }
-        @include desktop{
-            left: 22%;
-        }
+    @include desktop {
+      left: 22%;
     }
-    &__icon-div{
-        height: 1.8rem;
-        background-color: hwb(0 11% 86% / 0.5);        
-        padding: 0 .80rem 0 .80rem;
-        border-radius: 4px;
-        margin-right: 0.5rem;
-        align-items: center;
-        text-align: center;
+  }
+  &__icon-div {
+    height: 1.8rem;
+    background-color: hwb(0 11% 86% / 0.5);
+    padding: 0 0.8rem 0 0.8rem;
+    border-radius: 4px;
+    margin-right: 0.5rem;
+    align-items: center;
+    text-align: center;
+  }
+  &__icon {
+    margin-top: 0.25rem;
+  }
+  &__full-screen-icon {
+    margin-right: 0.5rem;
+  }
+  &__duration {
+    background-color: hwb(0 11% 86% / 0.5);
+    display: flex;
+    height: 1.8rem;
+    margin: 0 0.5rem;
+    border-radius: 4px;
+    align-items: center;
+    padding: 0 0.75rem;
+  }
+  &__duration-line {
+    top: 30%;
+    width: 3.5rem;
+    margin: 0.75rem;
+    border-top: solid black 4px;
+    @include tablet {
+      width: 18rem;
     }
-    &__icon{
-        margin-top: .25rem;
+    @include desktop {
+      width: 22rem;
     }
-    &__full-screen-icon{
-        margin-right: .5rem;
-    }
-    &__duration{
-        background-color: hwb(0 11% 86% / 0.5);        
-        display: flex;
-        height: 1.8rem;
-        margin: 0 .5rem;
-        border-radius: 4px;
-        align-items: center;
-        padding: 0 .75rem;
-    }
-    &__duration-line{
-        top: 30%;
-        width: 3.5rem;
-        margin: .75rem;
-        border-top: solid black 4px;
-        @include tablet{
-            width: 18rem;
-        }
-        @include desktop{
-            width: 22rem;
-        }
-    }
-    &__duration-time{
-        color: $mercury-secondary;
-        margin-top: 0.8rem;
-    }
+  }
+  &__duration-time {
+    color: $mercury-secondary;
+    margin-top: 0.8rem;
+  }
 }

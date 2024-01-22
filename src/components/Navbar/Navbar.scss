@@ -7,7 +7,6 @@
     flex-direction: row;
     align-items: center;
   }
-
   &__form {
     position: relative;
     @include tablet {
@@ -16,7 +15,6 @@
     @include desktop {
       width: 80%;
       margin-right: 4rem;
-      //width: 56vw;
     }
   }
   &__span-and-avatar {

@@ -1,40 +1,30 @@
-@use '../../styles/partials/mixins' as *;
-@use '../../styles/partials/variables' as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
 
-.videos{
-
-    padding: 1rem;
-    &__list{
-        display: flex;
-        padding-bottom: 1rem;
-
+.videos {
+  padding: 1rem;
+  &__list {
+    display: flex;
+    padding-bottom: 1rem;
+  }
+  &__heading {
+    font-weight: bold;
+    color: $silver-primary;
+    padding-bottom: 0.75rem;
+    @include desktop {
+      margin-bottom: 0;
     }
-    &__heading{
-        font-weight: bold;
-        color: $silver-primary;
-        padding-bottom: .75rem;
-        @include desktop{
-            margin-bottom: 0;
-        }
-    }
-    &__image{
-        width: 130px;
-        height: 100px;
-        max-width: 18vh; 
-        max-height: 10%;
-        border-radius: 4px;
-        margin-right: 1rem;
-        background-color: $mercury-secondary;
-
-    }
-    &__title-and-channel{
-
-    }
-    &__title{
-        font-weight: bold;
-
-    }
-    &__channel{
-
-    }
+  }
+  &__image {
+    width: 130px;
+    height: 100px;
+    max-width: 18vh;
+    max-height: 10%;
+    border-radius: 4px;
+    margin-right: 1rem;
+    background-color: $mercury-secondary;
+  }
+  &__title {
+    font-weight: bold;
+  }
 }

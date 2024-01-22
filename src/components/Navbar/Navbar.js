@@ -14,9 +14,11 @@ function Navbar() {
             <span className="nav__search-icon">
               <img src={SearchIcon} alt="Icon" />
             </span>
-            <input type="search" className="nav__input" placeholder="Search">
-              {/* <img src={SearchIcon}></img> */}
-            </input>
+            <input
+              type="search"
+              className="nav__input"
+              placeholder="Search"
+            ></input>
           </div>
           <Avatar />
         </div>

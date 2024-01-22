@@ -1,15 +1,14 @@
-@use '../../styles/partials/mixins' as *;
-@use '../../styles/partials/variables' as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
 
-.nav__logo{
-    text-align: center;
-    align-items: center;
-    @include tablet{
-        width: 15%;
-        margin-right: 6rem;
-    }
-    @include desktop{
-        margin: 0 14rem 0 4rem;
-
-    }
+.nav__logo {
+  text-align: center;
+  align-items: center;
+  @include tablet {
+    width: 15%;
+    margin-right: 6rem;
+  }
+  @include desktop {
+    margin: 0 14rem 0 4rem;
+  }
 }
