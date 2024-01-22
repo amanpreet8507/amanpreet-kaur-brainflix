@@ -2,10 +2,12 @@ import './FeaturedVideo.scss';
 import PlayIcon from '../../assets/Icons/play.svg';
 import FullScreenIcon from '../../assets/Icons/fullscreen.svg';
 import VolumeUpIcon from '../../assets/Icons/volume_up.svg';
+
 const FeaturedVideo = ({ featuredVideo }) => {
-  
-    const {image, duration} = featuredVideo
+    const {image, duration, title, channel, description, likes, views, comments} = featuredVideo
     return (
+    <>
+    {/************************* Featured Video on screen ***************/}
     <div className="video__container">
         <div className="video__image-and-duration">
           <img className="video__image" src={image}></img>
@@ -24,6 +26,7 @@ const FeaturedVideo = ({ featuredVideo }) => {
           </div>
         </div>       
     </div>
+    </>
   )
 }
 

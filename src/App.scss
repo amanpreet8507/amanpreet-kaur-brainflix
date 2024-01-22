@@ -4,4 +4,12 @@
 
 body {
     font-family: "Avenir Next LT Pro", sans-serif;
+    box-sizing: border-box;
+}
+
+.video-description__and__video-list{
+    @include desktop{
+        display: flex;
+        margin: auto 2rem;
+    }
 }

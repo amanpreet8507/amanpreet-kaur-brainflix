@@ -1,5 +1,7 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/variables' as *;
+
+// Featured video on screen ********************
 .video{
     &__container{
         position: relative;
@@ -20,19 +22,22 @@
         }
         @include desktop{
             width: 70%;
+            height: 65vh;
         }
     }
     &__icons{
         width: 80%;
         left: 9%;
         top: 85%;
-        right: 5%;
+        right: 2%;
         position: absolute;
         display: flex;
         @include tablet{
+            left: 15%;
+        }
+        @include desktop{
             left: 22%;
         }
-
     }
     &__icon-div{
         height: 1.8rem;
@@ -60,7 +65,7 @@
     }
     &__duration-line{
         top: 30%;
-        width: 9rem;
+        width: 3.5rem;
         margin: .75rem;
         border-top: solid black 4px;
         @include tablet{

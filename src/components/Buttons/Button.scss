@@ -38,7 +38,7 @@
 
 }
 
-// For Upload buttons only
+// For Upload button only
 .upload__button{
     @include tablet{
         position: absolute;
@@ -51,4 +51,12 @@
         left: 69%;
     }
 
+}
+
+// For Comment button only
+.comment__button{
+    @include tablet{
+        margin: 3.3rem 1rem;
+        padding-right: 1.2rem;
+    }
 }

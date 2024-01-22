@@ -1,5 +1,6 @@
 import './VideosList.scss';
 const VideosList = ({videoDataArr, featuredVideo, changeVideo}) => {
+
   return (
     <section className="videos">
       <p className="videos__heading">NEXT VIDOES</p>
@@ -11,7 +12,12 @@ const VideosList = ({videoDataArr, featuredVideo, changeVideo}) => {
             onClick={() => changeVideo({
               title: video.title,
               channel: video.channel,
-              image: video.image
+              image: video.image,
+              duration: video.duration,
+              views: video.views,
+              likes: video.likes,
+              description: video.description,
+              commentData: video.comments
             })}>
               <img className="videos__image" src={video.image}></img>
               <div className="videos__title-and-channel">
