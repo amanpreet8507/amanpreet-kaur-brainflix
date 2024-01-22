@@ -11,5 +11,6 @@ body {
   @include desktop {
     display: flex;
     margin: auto 2rem;
+    align-items: center;
   }
 }
