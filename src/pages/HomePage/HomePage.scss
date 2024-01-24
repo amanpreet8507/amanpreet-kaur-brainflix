@@ -1,0 +1,12 @@
+//@use "./styles/partials/typography" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+
+.video-description__and__video-list {
+  @include desktop {
+    display: flex;
+    margin: auto 2rem;
+    align-items: center;
+  }
+}

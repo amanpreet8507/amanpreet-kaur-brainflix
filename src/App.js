@@ -1,31 +1,17 @@
-import { useState } from "react";
 import "./App.scss";
 import Navbar from "./components/Navbar/Navbar";
-import videoData from "./data/video-details.json";
-import FeaturedVideo from "./components/FeaturedVideo/FeaturedVideo";
-import VideosList from "./components/VideosList/VideosList";
-import VideoDescription from "./components/VideoDescription/VideoDescription";
-import {BrowserRouter, Router, Route} from "react-router-dom";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import HomePage from "./pages/HomePage/HomePage";
 
 function App() {
-  const [currentVideo, setCurrentVideo] = useState(videoData);
-
-  const alterVideo = (videoObject) => {
-    setCurrentVideo(videoObject);
-  };
-
   return (
     <div>
       <Navbar />
-      <FeaturedVideo featuredVideo={currentVideo} />
-      <div className="video-description__and__video-list">
-        <VideoDescription featuredVideo={currentVideo} />
-        <VideosList
-          videoDataArr={videoData}
-          featuredVideo={currentVideo}
-          changeVideo={alterVideo}
-        />
-      </div>
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage/>}/>
+      </Routes>
+      </BrowserRouter>
     </div>
   );
 }
