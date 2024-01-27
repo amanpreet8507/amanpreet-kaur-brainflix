@@ -1,17 +1,26 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./HomePage.scss";
-import videoData from "../../data/video-details.json";
 import FeaturedVideo from "../../components/FeaturedVideo/FeaturedVideo";
 import VideosList from "../../components/VideosList/VideosList";
 import VideoDescription from "../../components/VideoDescription/VideoDescription";
 import axios from "axios";
 
 const HomePage = () => {
-    const fetchData = async () => {
-      const apiUrl = ''
-      const videoData = await axios.get(apiUrl)
-    }
-    const [currentVideo, setCurrentVideo] = useState(videoData[0]);
+    const [currentVideo, setCurrentVideo] = useState([]);
+    const [videosData, setVideosData] = useState([]);
+
+    useEffect(()=>{
+      const fetchData = async () => {
+        const apiUrl = 'https://project-2-api.herokuapp.com/videos?api_key=0f205db7-e67d-4442-9a4e-f812451245a6'
+        const response = await axios.get(apiUrl)
+        const fetchedData = response.data
+        console.log(fetchedData)
+        setCurrentVideo(fetchedData[0]);
+        setVideosData(fetchedData)
+      }
+      fetchData()
+    },[])
+    
 
     const alterVideo = (videoObject) => {
       setCurrentVideo(videoObject);
@@ -23,7 +32,7 @@ const HomePage = () => {
       <div className="video-description__and__video-list">
         <VideoDescription featuredVideo={currentVideo} />
         <VideosList
-          videoDataArr={videoData}
+          videoDataArr={videosData}
           featuredVideo={currentVideo}
           changeVideo={alterVideo}
         />
