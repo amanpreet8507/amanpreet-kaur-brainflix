@@ -7,11 +7,13 @@ import VideoUpload from "./pages/VideoUpload/VideoUpload";
 function App() {
   return (
     <div>
-      <Navbar />
+
       <BrowserRouter>
+      <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />}/>
         <Route path="uploadvideo" element={<VideoUpload />} />
+        <Route path="/:videoId" element={<HomePage/>} />
       </Routes>
       </BrowserRouter>
     </div>

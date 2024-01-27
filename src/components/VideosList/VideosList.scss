@@ -3,6 +3,10 @@
 
 .videos {
   padding: 1rem;
+  &__link{
+    text-decoration: none;
+    color: $black-primary;
+  }
   &__list {
     display: flex;
     padding-bottom: 1rem;

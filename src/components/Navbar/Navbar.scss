@@ -32,7 +32,7 @@
 
     @include tablet {
       height: $tablet-form-field-height;
-      width: 300px;
+      width: 290px;
     }
   }
   &__search-icon {
@@ -49,8 +49,11 @@
     width: 100%;
     padding-left: 30px;
     font-weight: 600;
-    color: $black-primary;
     height: $mobile-form-field-height;
+    border-radius: 5px;
+    border: 2px solid $mercury-secondary;
+    background-color: $alabaster-secondary;
+
     @include tablet {
       height: $tablet-form-field-height;
     }

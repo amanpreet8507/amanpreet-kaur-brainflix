@@ -40,7 +40,7 @@
 .upload__button {
   @include tablet {
     position: absolute;
-    left: 70%;
+    left: 68%;
   }
   @include desktop {
     margin: auto 2rem auto 2rem;
@@ -57,4 +57,8 @@
       margin: 3.3rem 1rem 0 1rem;
     }
   }
+}
+
+a{
+  margin-bottom: 2.5rem;
 }

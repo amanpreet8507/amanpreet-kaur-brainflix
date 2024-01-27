@@ -7,7 +7,7 @@ import SearchIcon from "../../assets/Icons/search.svg";
 function Navbar() {
   return (
     <nav className="nav">
-      <Logo />
+      <Logo/>
       <form className="nav__form">
         <div className="nav__span-and-avatar">
           <div className="nav__search">

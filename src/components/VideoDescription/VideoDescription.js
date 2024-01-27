@@ -86,7 +86,7 @@ const VideoDescription = ({ featuredVideo }) => {
           {commentData &&
             commentData.map((comment) => (
               <div key={comment.id} className="comments__container">
-                <img className="comments__container__avatar-img" src="#" alt={comment.title}></img>
+                <img className="comments__container__avatar-img" alt={comment.title}></img>
                 <div className="comments__container-comment-details">
                   <div className="comments__container-name-date">
                     <p className="comments__container-name">{comment.name}</p>

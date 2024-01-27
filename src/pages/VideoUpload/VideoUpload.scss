@@ -1,0 +1,76 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.upload-video{
+    padding: 1rem;
+    border-top: 2px solid $mercury-secondary;
+    @include tablet{
+        padding: 1rem 2rem;
+    }
+    @include desktop{
+        
+    }
+    &__h1{
+        font-size: $mobile-page-header;
+        font-weight: bold;
+        line-height: $mobile-ph-line-height;
+        @include desktop{
+            margin: 0 7rem;
+        }
+    }
+    &__img{
+        background-color: $mercury-secondary;
+        width: 100%;
+        height: 250px;
+        border-radius: 4px;
+
+        @include tablet{
+            width: 65%;
+        }
+        @include desktop{
+            width: 100%;
+            height: 225px;
+        }
+    }
+    &__form{
+        @include desktop{
+            margin: 0 7rem;
+            display: flex;
+            gap: 2rem;
+        }
+    }
+    &__p{
+        font-size: $mobilee-section-header;
+        color: $silver-primary;
+        font-weight: bold;
+    }
+    &__title-input{
+        line-height: $mobile-form-field-height;
+        width: 96%;
+        font-size: $mobile-subheader;
+        padding: 0 0 0 1rem;
+        border-radius: 5px;
+        border: 2px solid $mercury-secondary;
+        background-color: $alabaster-secondary;
+
+        @include tablet {
+            height: $tablet-form-field-height;
+        }
+    }
+    &__description-div{
+        margin-top: 1.7rem;
+    }
+    &__description-textarea {
+        height: 15vh;
+        padding: 1rem 0 0 1rem;
+        width: 96%;
+        border-radius: 5px;
+        border: 2px solid $mercury-secondary;
+        background-color: $alabaster-secondary;
+        color: $black-primary;
+    
+        @include desktop {
+          width: 30vw;
+        }
+    }
+}

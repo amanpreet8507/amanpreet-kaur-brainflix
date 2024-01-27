@@ -4,9 +4,14 @@ import videoData from "../../data/video-details.json";
 import FeaturedVideo from "../../components/FeaturedVideo/FeaturedVideo";
 import VideosList from "../../components/VideosList/VideosList";
 import VideoDescription from "../../components/VideoDescription/VideoDescription";
+import axios from "axios";
 
 const HomePage = () => {
-    const [currentVideo, setCurrentVideo] = useState(videoData);
+    const fetchData = async () => {
+      const apiUrl = ''
+      const videoData = await axios.get(apiUrl)
+    }
+    const [currentVideo, setCurrentVideo] = useState(videoData[0]);
 
     const alterVideo = (videoObject) => {
       setCurrentVideo(videoObject);
