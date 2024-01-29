@@ -3,11 +3,11 @@ import PlayIcon from "../../assets/Icons/play.svg";
 import FullScreenIcon from "../../assets/Icons/fullscreen.svg";
 import VolumeUpIcon from "../../assets/Icons/volume_up.svg";
 
-const FeaturedVideo = ({ featuredVideo }) => {
+const FeaturedVideo = ({ currentVideo }) => {
   const {
     image,
     duration,
-  } = featuredVideo;
+  } = currentVideo;
   return (
     <>
       {/************************* Featured Video on screen ***************/}

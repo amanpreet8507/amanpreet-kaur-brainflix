@@ -5,9 +5,10 @@ import viewsIcon from "../../assets/Icons/views.svg";
 import likesIcon from "../../assets/Icons/likes.svg";
 import Avatar from "../Avatar/Avatar";
 
-const VideoDescription = ({ featuredVideo }) => {
-  const { title, channel, description, likes, views, commentData } =
-    featuredVideo;
+const VideoDescription = ({ currentVideo }) => {
+  const { title, channel, description, likes, views } = currentVideo;
+
+  const getComments = currentVideo.comments;
   {
     /*ConverTimestamp to Date Function*/
   }
@@ -62,8 +63,7 @@ const VideoDescription = ({ featuredVideo }) => {
       {/*******************  Comment Form *************************/}
       <div className="video__comments-div">
         <p className="video__no-of-comments">
-          {" "}
-          {commentData?.length || 0} Comments
+          {getComments?.length || 0} Comments
         </p>
         <section className="video__form-section">
           <div className="video__avatar-img">
@@ -83,10 +83,10 @@ const VideoDescription = ({ featuredVideo }) => {
         </section>
         <section>
           {/************************** Comments Section ********************/}
-          {commentData &&
-            commentData.map((comment) => (
+          {getComments &&
+            getComments.map((comment) => (
               <div key={comment.id} className="comments__container">
-                <img className="comments__container__avatar-img" alt={comment.title}></img>
+                <img className="comments__container__avatar-img" src={comment.image} alt=""></img>
                 <div className="comments__container-comment-details">
                   <div className="comments__container-name-date">
                     <p className="comments__container-name">{comment.name}</p>
