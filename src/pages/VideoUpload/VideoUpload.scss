@@ -33,8 +33,11 @@
         }
     }
     &__form{
+        @include tablet{
+            border-top: 2px solid $mercury-secondary;
+        }
         @include desktop{
-            margin: 0 7rem;
+            margin: 1rem 4rem;
             display: flex;
             gap: 2rem;
         }

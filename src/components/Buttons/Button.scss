@@ -41,9 +41,12 @@
       display: flex;
       margin-top: 1rem;
       justify-content: flex-end;
+      border-top: 2px solid $mercury-secondary;
+      padding-top : 1rem
     }
     @include desktop{
       width: 82vw;
+      margin: 1rem 4rem;
     }
   }
 }
