@@ -1,7 +1,9 @@
 import './VideoUpload.scss';
 import bicycleImg from '../../assets/Images/Upload-video-preview.jpg';
+import PublishButton from '../../components/Buttons/PublishButton';
 
 const VideoUpload = () => {
+
   return (
     <div className="upload-video">
       <p className="upload-video__h1">Upload Video</p>
@@ -21,6 +23,7 @@ const VideoUpload = () => {
             </div>
         </div>
       </form>
+      <PublishButton />
     </div>
   )
 }

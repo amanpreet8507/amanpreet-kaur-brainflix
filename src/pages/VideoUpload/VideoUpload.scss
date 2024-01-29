@@ -56,6 +56,9 @@
         @include tablet {
             height: $tablet-form-field-height;
         }
+        @include desktop{
+            // width: 125%;
+        }
     }
     &__description-div{
         margin-top: 1.7rem;
@@ -70,7 +73,7 @@
         color: $black-primary;
     
         @include desktop {
-          width: 30vw;
+          width: 40vw;
         }
     }
 }
