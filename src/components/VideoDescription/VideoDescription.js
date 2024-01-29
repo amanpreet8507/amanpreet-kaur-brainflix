@@ -1,16 +1,14 @@
 import "./VideoDescription.scss";
-import AvatarImg from "../../assets/Images/Mohan-muruge.jpg";
 import CommentButton from "../Buttons/CommentButton";
 import viewsIcon from "../../assets/Icons/views.svg";
 import likesIcon from "../../assets/Icons/likes.svg";
 import Avatar from "../Avatar/Avatar";
 
-const VideoDescription = ({ featuredVideo }) => {
-  const { title, channel, description, likes, views, commentData } =
-    featuredVideo;
-  {
-    /*ConverTimestamp to Date Function*/
-  }
+const VideoDescription = ({ currentVideo }) => {
+  
+  const { title, channel, description, likes, views, comments } = currentVideo;
+
+  {/******************** ConverTimestamp to Date Function *******************/}
   const convertTimeStampToDate = (timestamp) => {
     const now = new Date();
     const commentTime = new Date(timestamp);
@@ -36,6 +34,8 @@ const VideoDescription = ({ featuredVideo }) => {
       return "just now";
     }
   };
+
+
   return (
     <section className="video">
       {/******************** Featured Video Information Container *******************/}
@@ -59,11 +59,10 @@ const VideoDescription = ({ featuredVideo }) => {
           <p className="video__description">{description}</p>
         </section>
       </div>
-      {/*******************  Comment Form *************************/}
+      {/****************************  Comment Form *********************************/}
       <div className="video__comments-div">
         <p className="video__no-of-comments">
-          {" "}
-          {commentData?.length || 0} Comments
+          {comments?.length || 0} Comments
         </p>
         <section className="video__form-section">
           <div className="video__avatar-img">
@@ -82,11 +81,11 @@ const VideoDescription = ({ featuredVideo }) => {
           </form>
         </section>
         <section>
-          {/************************** Comments Section ********************/}
-          {commentData &&
-            commentData.map((comment) => (
+          {/**************************** Comments Section ***************************/}
+          {comments &&
+            comments.map((comment) => (
               <div key={comment.id} className="comments__container">
-                <img className="comments__container__avatar-img" alt={comment.title}></img>
+                <img className="comments__container__avatar-img" src={comment.image} alt=""></img>
                 <div className="comments__container-comment-details">
                   <div className="comments__container-name-date">
                     <p className="comments__container-name">{comment.name}</p>
