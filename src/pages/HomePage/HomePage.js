@@ -7,30 +7,35 @@ import VideoDescription from "../../components/VideoDescription/VideoDescription
 import axios from "axios";
 
 const HomePage = () => {
+
     const [currentVideo, setCurrentVideo] = useState({});
     const [videosData, setVideosData] = useState([]);
     const {videoId} = useParams()
     console.log("videoIDvideoId", videoId)
 
+{/****************** Fuction to fetch Videos Array ********************/}
     const fetchVideosList = async () => {
       const apiKey = `0f205db7-e67d-4442-9a4e-f812451245a6`
       const apiUrl = `https://project-2-api.herokuapp.com/videos?api_key=${apiKey}`
+
       const response = await axios.get(apiUrl)
       const fetchedData = response.data
-      //setCurrentVideo(fetchedData[0]);
+
       setVideosData(fetchedData)
     }
 
+{/*********** Fuction to fetch each Video details using id ************/}
     const fetchVideoDetails = async (id) => {
       const apiKey = `0f205db7-e67d-4442-9a4e-f812451245a6`
       const apiUrl = `https://project-2-api.herokuapp.com/videos/${id}?api_key=${apiKey}`
+      
       const response = await axios.get(apiUrl)
       const fetchedData = response.data
 
       setCurrentVideo(fetchedData);
-      console.log("fetched data in video des", fetchedData)
     }
 
+{/**************** Updating the useState variables ********************/}
     useEffect(()=>{
       if(videoId){
         fetchVideoDetails(videoId);
@@ -39,13 +44,7 @@ const HomePage = () => {
         fetchVideoDetails('c05b9a93-8682-4ab6-aff2-92ebb4bbfc14');
         fetchVideosList();
       }
-    },[videoId])
-
-    
-
-    // const alterVideo = (videoObject) => {
-    //   setCurrentVideo(videoObject);
-    // };
+    }, [videoId])
 
   return (
     currentVideo.image !== videosData.image && (
@@ -56,7 +55,6 @@ const HomePage = () => {
         <VideosList
           videosData={videosData}
           currentVideo={currentVideo}
-          // changeVideo={alterVideo}
         />
       </div>
     </div>
